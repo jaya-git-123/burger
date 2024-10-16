@@ -1,38 +1,420 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(33, 89%, 82%);
+  overflow-x: hidden;
+}
+
+.logo-img {
+  background-color: yellow;
+  margin-left: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: hsl(33, 89%, 82%);
+  width: 100%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-logo {
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  margin-right: 100px;
+  transition: color 0.2s ease;
+  padding: 20px;
+  border-bottom: 2px solid transparent;
+
+}
+
+.navbar-links a:hover {
+  color: #000;
+  border-bottom: 3px solid #FFFF00; 
+}
+
+
+.navbar-links li {
+  margin-left: 1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.flex-1 {
+  display: flex;
+}
+
+.hd {
+  font-size: 5rem;
+  margin-top: 120px;
+}
+
+h1 {
+  font-family: "Aclonica", sans-serif;
+}
+h2 {
+  font-family: "Aclonica", sans-serif;
+}
+
+.homeimg1 {
+  width: 100%;
+  height: 90vh;
+  margin-top: 30px;
+position: relative;
+object-fit: cover;
+animation: drop 1s ease-in-out forwards;
+}
+
+@keyframes drop {
+  0% {
+  top: -100px;
+  opacity: 0;
   }
+  100% {
+  top: 10%;
+  opacity: 1;
+  }
+  }
+
+.left-side {
+  margin-left: 100px;
+  margin-right: 40px;
+  flex-basis: 50%;
+  margin-top: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right-img {
+  flex-basis: 50%;
+  margin-right: 100px;
+}
+
+.burgerimg {
+width: 100%;
+object-fit: cover;
+}
+
+.para-st {
+  color: #333;
+  font-size: 20px;
+  margin-right: 100px;
+  animation: drop 1s ease-in-out forwards;
+  
+}
+
+.bite-now {
+  width: 30%;
+  height: 50px;
+  border: 2px solid yellow;
+  border-radius: 20px;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.tomato {
+  width: 60px;
+  height: 50px;
+  animation: down 1s ease-in-out forwards;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 70%;
+  margin-top: 160px;
+}
+.tomat {
+  width: 60px;
+  height: 50px;
+  animation: down 1s ease-in-out forwards;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 70%;
+  margin-top: 710px;
+}
+.potato {
+  width: 90px;
+  height: 100px;
+  animation: down 1s ease-in-out forwards;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  margin-top: 400px;
+}
+@keyframes down {
+  0% {
+  top: -100px;
+  opacity: 0;
+  }
+  100% {
+  top: 10%;
+  opacity: 1;
+  }
+  }
+.secret-rec {
+  text-align: center;
+  margin-top: 50px;
+}
+.lf-img {
+position: relative;
+width: 100%;
+height: 300px;
+}
+.burger2 {
+  position: absolute;
+left: -100%;
+height: 700px;
+animation: move-right 2s forwards;
+}
+
+@keyframes move-right {
+  0% {
+  left: -100%;
+  }
+  100% {
+  left: 25%;
+  }
+  }
+.flex2 {
+  display: flex;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+}
+.card-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.card-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+@keyframes move-left {
+  0% {
+  right: -100%;
+  }
+  100% {
+  right: 15%;
+  }
+  }
+.img-align {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: rgb(255, 123, 0);
+  margin-right: 10px;
+}
+.lf-img {
+  flex-basis: 50%;
+}
+.rt-img {
+  flex-basis: 50%;
+  animation: move-left 1s forwards;
+  right: 100%;
+  position: absolute;
+}
+.flex3 {
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
+}
+.h-center {
+  text-align: center;
+  margin-top: 450px;
+  margin-bottom: 30px;
+}
+.dollar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.grid {
+  width: 230px;
+  height: 230px;
+  border-radius: 20px;
+  background-color: yellow;
+  border: 4px solid white;
+  margin-bottom: 40px;
+  margin-right: 60px;
+}
+.chickenburger {
+  width: 90px;
+  height: 90px;
+  margin-left: 50px;
+  position: relative;
+  top: 0cap;
+}
+.img4{
+  margin: 10px;
+}
+.popular {
+  margin: 20px;
+  padding: 20px;
+}
+.bag {
+  width: 20px;
+  height: 20px;
+}
+.flex-st {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 50px;
+  padding: 20px;
+}
+.delivery {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+}
+.burger5 {
+  width: 100%;
+  height: 100%;
+}
+.del-flex h1 {
+  margin-left: 100px;
+  margin-top: 150px;
+}
+.del-flex p {
+  margin-left: 100px;
+  margin-right: 50px;
+}
+.bt-st {
+  width: 200px;
+  height: 50px;
+  margin-left: 100px;
+  background-color: yellow;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+.bg {
+  height: 300px;
+  width: 800px;
+  background-color: brown;
+  border: 2px solid brown;
+  margin-left: 250px;
+  border-radius: 30px;
   color: white;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.center {
+  text-align: center;
+}
+.man {
+  width: 250px;
+  height: 275px;
+}
+.st2 {
+  margin: 10px;
+}
+.new {
+  display: flex;
+}
+.soda {
+  width: 90px;
+  height: 90px;
+  margin-left: 30px;
+}
+.st-l {
+  margin-right: 40px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.st-r {
+  margin-right: 40px;
+  margin-left: 50px;
+}
+.flex6 {
+  display: flex;
+}
+.style3 {
+  margin-top: 10px;
+}
+.social {
+  display: flex;
+  justify-content: space-evenly;
+}
+.st-social {
+  background-color: yellow;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media screen and (max-width: 450px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .navbar-links.open {
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-links li {
+    margin: 0.5rem 0;
   }
-}
+
+  .menu-toggle {
+    display: block;
+  }
+  .flex-1 {
+    flex-direction: column;
+  }
+} 
